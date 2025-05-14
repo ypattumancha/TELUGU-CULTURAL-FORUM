@@ -15,10 +15,10 @@ const blogPosts = [
   },
   {
     id: '2',
-    title: 'Interview with Community Leader Dr. Raju',
-    excerpt: 'Learn about Dr. Raju\'s journey in Canada and his vision for strengthening our Telugu community.',
+    title: 'Interview with Community Leader Ananda Yarradoddi',
+    excerpt: 'Learn about Ananda Yarradoddi\'s journey in Canada and his vision for strengthening our Telugu community.',
     date: 'March 22, 2024',
-    author: 'Aditya Kumar',
+    author: 'Yashovardhan Pattumanchala',
     image: 'https://images.pexels.com/photos/5905700/pexels-photo-5905700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'Community'
   },
