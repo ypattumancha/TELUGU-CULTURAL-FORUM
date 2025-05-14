@@ -1,12 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  a {
+    @apply transition-all duration-300;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium 
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 
+           hover:scale-105 active:scale-95 transform hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-400 hover:bg-primary-500 text-white focus:ring-primary-400 
+           shadow-lg hover:shadow-xl hover:glow-primary;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-500 hover:bg-secondary-600 text-white focus:ring-secondary-400 
+           shadow-lg hover:shadow-xl hover:glow-secondary;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary-400 text-primary-400 hover:bg-primary-50 
+           focus:ring-primary-400 hover:border-primary-500 hover:text-primary-500 
+           hover:glow-primary-soft;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 
+           hover:shadow-xl hover:scale-[1.02] hover:-translate-y-1;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-gray-700 hover:text-primary-400 font-medium rounded-md 
+           hover:bg-primary-50 transition-all duration-300 relative overflow-hidden
+           before:absolute before:inset-0 before:w-full before:h-full before:bg-primary-100
+           before:transform before:origin-left before:scale-x-0 hover:before:scale-x-100
+           before:transition-transform before:duration-300 before:-z-10;
+  }
+
+  .nav-link-active {
+    @apply text-primary-400 bg-primary-50;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none 
+           focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all 
+           duration-300 hover:border-primary-300;
+  }
+
+  .section-heading {
+    @apply relative mb-12 pb-4 text-center;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 
+           bg-primary-400 rounded-full animate-pulse-subtle;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(247,155,114,0.2); }
+  50% { box-shadow: 0 0 20px rgba(247,155,114,0.4); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hover-float:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 { @apply text-3xl; }
+  h2 { @apply text-2xl; }
+  h3 { @apply text-xl; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-400 rounded-full transition-colors duration-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+/* Loading States */
+.loading-shimmer {
+  @apply relative overflow-hidden bg-gray-100;
+}
+
+.loading-shimmer::after {
+  content: '';
+  @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent 
+         via-white/20 to-transparent animate-[shimmer_1.5s_infinite];
+}
+
+/* Carousel Customizations */
+.slick-dots li button:before {
+  @apply text-primary-400;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-primary-500;
+}
+
+/* Swiper Customizations */
+.swiper-pagination-bullet-active {
+  @apply bg-primary-400;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-primary-400 transition-all duration-300 hover:text-primary-500 
+         hover:scale-110;
+}
+
+/* Utility Additions: Glow Effects */
 @layer utilities {
   .glow-primary {
     animation: glow 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(247, 155, 114, 0.4); /* optional visual boost */
+    box-shadow: 0 0 10px rgba(247, 155, 114, 0.4);
   }
 
   .hover\:glow-primary:hover {
     animation: glow 2s ease-in-out infinite;
-    box-shadow: 0 0 10px rgba(247, 155, 114, 0.4); /* match the animation */
+    box-shadow: 0 0 10px rgba(247, 155, 114, 0.4);
   }
 
   .glow-primary-soft {
