@@ -40,7 +40,7 @@ const Login = () => {
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
         <div className="text-center">
           <Link to="/" className="inline-block">
-            <img src="/src/assets/tcf-logo.svg" alt="TCF Logo" className="h-16 w-16 mx-auto" />
+            <img src="/src/assets/TCF.jpg" alt="TCF Logo" className="h-16 w-16 mx-auto" />
           </Link>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
           <p className="mt-2 text-sm text-gray-600">

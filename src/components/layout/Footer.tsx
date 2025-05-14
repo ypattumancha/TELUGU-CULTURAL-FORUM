@@ -12,7 +12,7 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/src/assets/tcf-logo.svg" alt="TCF Logo" className="h-10 w-10" />
+              <img src="/src/assets/TCF.jpg" alt="TCF Logo" className="h-10 w-10" />
               <div>
                 <span className="font-heading font-bold text-white text-xl">Telugu</span>
                 <span className="font-heading font-bold text-secondary-400 text-xl"> Cultural Forum</span>

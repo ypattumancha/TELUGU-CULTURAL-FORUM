@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/src/assets/tcf-logo.svg" alt="TCF Logo" className="h-10 w-10" />
+            <img src="/src/assets/TCF.jpg" alt="TCF Logo" className="h-10 w-10" />
             <div>
               <span className="font-heading font-bold text-primary-800 text-xl">Telugu</span>
               <span className="font-heading font-bold text-secondary-500 text-xl"> Cultural Forum</span>
