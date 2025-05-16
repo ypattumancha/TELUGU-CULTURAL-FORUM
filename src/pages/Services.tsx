@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ServiceCategorySection from '../components/ServiceCategorySection';
 import { ArrowDown, Home, Calculator, Scale, Shield, Plane, GraduationCap, UtensilsCrossed, Globe, CalendarDays, Fence, Lightbulb, Trash2, Construction, Wrench, Ticket as Cricket, Music, Camera, Cog as Yoga } from 'lucide-react';
@@ -53,6 +54,15 @@ export const services: Service[] = [
 
 // Component
 const Services: React.FC = () => {
+=======
+import React, { useEffect } from 'react';
+import { services, serviceCategories } from '../data/services';
+import ServiceCategorySection from '../components/ServiceCategorySection';
+import { ArrowDown } from 'lucide-react';
+
+const Services: React.FC = () => {
+  // Function to handle smooth scroll
+>>>>>>> f8f967f612cb0a7bb19edec612a840b22c27d895
   const scrollToServices = () => {
     const servicesSection = document.getElementById('service-categories');
     if (servicesSection) {
@@ -68,10 +78,19 @@ const Services: React.FC = () => {
         <div className="bg-[url('https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] absolute inset-0 bg-cover bg-center bg-no-repeat"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">
             Our Services
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+=======
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              data-aos="fade-up">
+            Our Services
+          </h1>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8"
+             data-aos="fade-up" data-aos-delay="100">
+>>>>>>> f8f967f612cb0a7bb19edec612a840b22c27d895
             Discover our comprehensive range of professional services designed to meet your every need
           </p>
           <button 
@@ -88,9 +107,13 @@ const Services: React.FC = () => {
       {/* Services Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20" id="service-categories">
         <div className="max-w-3xl mx-auto mb-16 text-center">
+<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-gray-900 mb-6" data-aos="fade-up">
             Exceptional Services For All Your Needs
           </h2>
+=======
+          <h2 className="text-3xl font-bold text-gray-900 mb-6" data-aos="fade-up">Exceptional Services For All Your Needs</h2>
+>>>>>>> f8f967f612cb0a7bb19edec612a840b22c27d895
           <p className="text-gray-600" data-aos="fade-up" data-aos-delay="100">
             We offer a wide range of professional services to help you achieve your goals. 
             Browse our categories below to find the perfect solution for your needs.
@@ -101,7 +124,11 @@ const Services: React.FC = () => {
           {Object.keys(serviceCategories).map((category) => (
             <ServiceCategorySection 
               key={category} 
+<<<<<<< HEAD
               category={category as ServiceCategory} 
+=======
+              category={category as any} 
+>>>>>>> f8f967f612cb0a7bb19edec612a840b22c27d895
               services={services} 
             />
           ))}
