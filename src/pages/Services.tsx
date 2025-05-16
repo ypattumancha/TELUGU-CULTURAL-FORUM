@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { services, serviceCategories } from '../data/services';
+import { services, serviceCategories } from '..../data/services';
 import ServiceCategorySection from '../components/ServiceCategorySection';
 import { ArrowDown } from 'lucide-react';
 
