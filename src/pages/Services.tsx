@@ -28,9 +28,10 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: IconType;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>; // Generic icon type
   category: ServiceCategory;
 }
+
 
 export type ServiceCategory =
   | 'property'
