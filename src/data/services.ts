@@ -1,11 +1,11 @@
-import { type IconType } from 'lucide-react';
+
 import { Home, Calculator, Scale, Shield, Plane, GraduationCap, UtensilsCrossed, Globe, CalendarDays, Fence, Lightbulb, Trash2, Construction, Wrench, Ticket as Cricket, Music, Camera, Cog as Yoga } from 'lucide-react';
 
 export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: IconType;
+  
   category: ServiceCategory;
 }
 
@@ -45,7 +45,7 @@ export const services: Service[] = [
     id: 'legal',
     title: 'Legal Consultation',
     description: 'Our legal services cover a range of areas including business law, family law, and more. Get expert advice and representation tailored to your legal needs.',
-    icon: Scale,
+    
     category: 'legal'
   },
   {
